@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="true">
+    <!--<statusListener class="ch.qos.logback.core.status.OnConsoleStatusListener"/>-->
+    <!-- ref to http://logback.qos.ch/manual/layouts.html#logback-access-->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <charset>UTF-8</charset>
+            <pattern>%a %h %l %u [%t] "%r" %s %b "%i{Referer}" "%i{User-Agent}" %i{x-ssl-header}</pattern>
+        </encoder>
+    </appender>
+    <appender name="CONSOLE_DEBUG" class="ch.qos.logback.core.ConsoleAppender">
+        <filter class="ch.qos.logback.core.filter.EvaluatorFilter">
+            <evaluator>
+                <expression>
+                    event.getRequestURI().startsWith("/api/") || event.getRequestURI().matches("^/api/.*")
+                </expression>
+            </evaluator>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <encoder>
+            <charset>UTF-8</charset>
+            <pattern>%a %h %l %u [%t] "%r" %s %b %n=====&gt;%n%fullRequest%n&lt;=====%n%fullResponse</pattern>
+        </encoder>
+    </appender>
+
+    <!--<appender name="FILE_DEBUG" class="ch.qos.logback.core.rolling.RollingFileAppender">-->
+        <!--<filter class="ch.qos.logback.core.filter.EvaluatorFilter">-->
+            <!--<evaluator>-->
+                <!--<expression>-->
+                    <!--event.getRequestURI().startsWith("/api/") || event.getRequestURI().matches("^/api/.*")-->
+                <!--</expression>-->
+            <!--</evaluator>-->
+            <!--<onMismatch>DENY</onMismatch>-->
+        <!--</filter>-->
+        <!--<encoder>-->
+            <!--<charset>UTF-8</charset>-->
+            <!--<pattern>%a %h %l %u [%t] "%r" %s %b %n=====&gt;%n%fullRequest%n&lt;=====%n%fullResponse</pattern>-->
+        <!--</encoder>-->
+        <!--<file></file>-->
+        <!--<append>true</append>-->
+        <!--<rollingPolicy></rollingPolicy>-->
+    <!--</appender>-->
+
+    <appender-ref ref="CONSOLE" />
+    <appender-ref ref="CONSOLE_DEBUG" />
+</configuration>

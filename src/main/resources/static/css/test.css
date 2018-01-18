@@ -1,0 +1,157 @@
+* {
+		margin-left: auto;
+		margin-right: auto;
+		padding: 0px;
+}
+
+.container{
+	padding-top:30px; 
+	min-height: 500px;
+}
+
+#body-wrap{
+	width: 100%;
+	height:auto;
+}
+#body-content{
+	margin-top: 0px;
+	width: 1000px;
+	height: auto;
+}
+
+.clearfix{
+	clear: both;
+}
+
+#main-content{
+	/*margin-top:30px */
+	position: relative;
+}
+.side-left {
+	width: 265px;
+	float:left;
+	margin-top:13px;
+	padding-right: 72px;
+}
+.side-right{
+	width: 600px;
+	float: left;
+	margin:20px;
+
+}
+.btn-disabled{
+	color: grey;
+}
+
+.content{
+	width:1000px;
+	min-height: 600px;
+}
+
+.form {
+	position: absolute;
+	right: 120px;
+	top:20px;
+}
+
+.form button {
+	width: 80px;
+	height:30px;
+	background:#950101; 
+	color: #F8ECC2;
+	font-weight: bolder;
+	border: none;
+}
+.date-container {
+	margin-top:57px; 
+}
+
+.date {
+	position: absolute;
+	left: 0px;
+}
+
+.button {
+	width: 80px;
+	background:#950101; 
+	color: #F8ECC2;
+	font-weight: bolder;
+	border: none;
+	height:30px;
+}
+
+#content {
+    position: relative;
+    width: 1000px;
+    height:auto;
+    padding-top:10px;
+    background:url('../img/bg.jpg'); 
+}
+
+.login-box{
+	min-height: 80px;
+	width:228px;
+}
+.login-box .box {
+	width: 80%;
+	border-left: 2px solid #950101;
+	border-right: 2px solid #950101;
+	border-top: 2px solid #950101;
+	border-bottom: 5px solid #950101;
+	min-height: 80px;
+	border-radius: 1em;
+	padding: 1em;
+}
+.function-list{
+	width: 228px;
+	margin-top:100px;
+}
+.function-list ul{
+	width: 100%;
+	padding-left: 0em;
+}
+.function-list ul li{
+	width: 80%;
+	min-height: 50px;
+	text-align: center;
+	list-style: none;
+	font-size: 16px;
+	margin-top:1px;
+}
+.function-list ul li a {
+	display: block;
+	line-height: 50px;
+	text-decoration: none;
+	font-weight: bold;
+	color: #F8ECC2;
+	background: #950101;
+}
+
+.function-list ul li a:hover {
+	background:#F8ECC2;
+	color:#950101;
+}
+
+#c {
+    position: relative;
+    padding-top: 0px;
+}
+
+.table table td{
+	border-radius: 1em;
+}
+
+.canvas{
+
+	margin: 10px;
+	min-height: 400px;
+	/*background-color:#F8ECC2; */
+}
+
+.content-box {
+	width: 100%;
+	min-height:500px;
+	text-align: center;
+	padding-top: 100px; 
+	color:#950101;
+}
